@@ -1,4 +1,4 @@
-# Touch and Passeord authentication
+# Touch and Password authentication
 
 ## Instsall NODE
 ```https://nodejs.org/en/```
