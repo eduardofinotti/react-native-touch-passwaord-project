@@ -3,7 +3,6 @@ import { View, StyleSheet, Text, TextInput, TouchableOpacity, AsyncStorage, Keyb
 import Modal from 'react-native-modal';
 import * as Animatable from 'react-native-animatable'
 import FlashMessage from "react-native-flash-message";
-// import { showMessage, hideMessage } from "react-native-flash-message";
 var Message = require('../utils/message.js');
 
 const  MyModal = (props) => {
@@ -73,8 +72,6 @@ const  MyModal = (props) => {
       setConfirmPassword(null)
       setPasswordStored(null)
     }
-
-    
 
   return (
     <Modal
