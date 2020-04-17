@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, TextInput, TouchableOpacity, AsyncStorage, Keyb
 import Modal from 'react-native-modal';
 import * as Animatable from 'react-native-animatable'
 import FlashMessage from "react-native-flash-message";
+import Icon from 'react-native-vector-icons/MaterialIcons';
 var Message = require('../utils/message.js');
 
 const  MyModal = (props) => {
@@ -83,9 +84,14 @@ const  MyModal = (props) => {
 
       <FlashMessage position="top" /> 
 
-      <Animatable.View style={[styles.contentModal, {height: keyboardOpen?'65%':'40%'}]}>
+      <Animatable.View style={[styles.contentModal, {height: keyboardOpen?'70%':'40%'}]}>
           
             <View style={styles.modalHeader}>
+
+            <TouchableOpacity>
+              <Icon name="keyboard-arrow-down" size={30}/>
+            </TouchableOpacity>
+
               <Text style={styles.modalTitle}>{passwordStored? `Access your account!`: `Register a password!`}</Text>
             </View>
 
@@ -140,21 +146,25 @@ const styles = StyleSheet.create({
     },
   
     contentModal: {
-      height: '50%',  
+      height: '70%',  
       backgroundColor: '#fff', 
       borderTopEndRadius: 15, 
       borderTopStartRadius: 15,
       alignItems: 'center',
-      paddingTop: 20
+      padding: 0
+    },
+
+    modalHeader: {
+     alignItems: 'center'
     },
 
     inputPassword: {
       fontSize: 15,
-      margin: 9,
+      margin: 5,
       backgroundColor: '#fff',
       padding: 9,
       height: 45,
-      width: 200,
+      width: 270,
       textAlignVertical: 'top',
       color: '#000',
       borderRadius: 5,
@@ -191,6 +201,7 @@ const styles = StyleSheet.create({
 
     modalTitle: {
       fontSize: 22,
+      fontWeight: 'bold'
     },
   });
 
