@@ -22,7 +22,8 @@ export default StyleSheet.create({
         width: '80%', 
         height: 45, 
         backgroundColor: '#3C71FF', 
-        marginBottom: 20
+        marginBottom: 30,
+        borderRadius:5
     },
 
     textButtonAuth: {
