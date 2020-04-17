@@ -68,8 +68,8 @@ const  MyModal = (props) => {
     function resetPassword() {
       AsyncStorage.clear()
       Message.message('Success!', 'Password removed!', 'success')
-      setPassword(null)
-      setConfirmPassword(null)
+      setPassword('')
+      setConfirmPassword('')
       setPasswordStored(null)
     }
 
