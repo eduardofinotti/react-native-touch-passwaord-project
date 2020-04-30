@@ -74,11 +74,17 @@ const  MyModal = (props) => {
       setPasswordStored(null)
     }
 
+    function closeModal() {
+      props.close()
+      setKeyboardOpen(false)
+    }
+
   return (
     <Modal
     testID={'modal'}
     isVisible={props.visible}
-    onSwipeComplete={props.close}
+    onSwipeComplete={() => closeModal()}
+    onBackdropPress={() => closeModal()}
     swipeDirection={['down']}
     style={[styles.modal]}>
 
@@ -88,9 +94,9 @@ const  MyModal = (props) => {
           
             <View style={styles.modalHeader}>
 
-            <TouchableOpacity>
-              <Icon name="keyboard-arrow-down" size={30}/>
-            </TouchableOpacity>
+              <TouchableOpacity>
+                <Icon name="arrow-drop-down" size={30}/>
+              </TouchableOpacity>
 
               <Text style={styles.modalTitle}>{passwordStored? `Access your account!`: `Register a password!`}</Text>
             </View>

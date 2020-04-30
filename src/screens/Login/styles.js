@@ -4,7 +4,7 @@ export default StyleSheet.create({
     
     container: {
         flex: 1,
-        backgroundColor: '#fff'
+        backgroundColor: '#ECF2FF'
     },
 
     constainerAuth: {
@@ -12,7 +12,7 @@ export default StyleSheet.create({
         alignContent: 'center', 
         alignItems: 'center', 
         justifyContent: 'flex-end', 
-        marginBottom: '10%'
+        marginBottom: 10
     },
 
     buttonAuth: {

@@ -12,7 +12,6 @@ import logo from '../../assets/logo.png'
 export default function Login({ navigation }) {
 
   const [showModal, setShowModal] = useState(false)
-  const [myPassword, setMyPassword] = useState('')
 
   saveItem = async () => {
     setShowModal(false)
@@ -36,28 +35,33 @@ export default function Login({ navigation }) {
  
     return (
       <SafeAreaView style={styles.container}>
-        <StatusBar backgroundColor='#FFF' barStyle="dark-content" />
+        <StatusBar barStyle="dark-content" />
 
-        <View style={{ alignContent:'center', alignItems: 'center', justifyContent: 'center', marginTop: '70%' }}>
+        <View style={{ alignItems: 'center', justifyContent: 'center', marginTop: '40%' }}>
           <Image source={logo} />
         </View>
 
-        <Animatable.View 
-          animation='fadeInUp' duration={300}
-          style={styles.constainerAuth}>
-        
+        <View style={{ alignItems: 'center', justifyContent: 'center', alignContent: 'center' }}>
+          <Text style={{fontSize: 24, justifyContent: 'center', marginHorizontal: 20, color: '#0034BE'}}>
+            Faça login, e aproveite 
+          </Text>
+          <Text style={{fontSize: 24, justifyContent: 'center', marginHorizontal: 20, color: '#0034BE'}}>
+            o seu aplicativo!
+          </Text>
+        </View>
+
+        <Animatable.View animation='fadeInUp' duration={300} style={styles.constainerAuth}>
           <TouchableOpacity 
             style={styles.buttonAuth}
             onPress={() => scanFingerPrint()} >
-            <Text style={styles.textButtonAuth}> TouchId Auth</Text>
+            <Text style={styles.textButtonAuth}> TouchID</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
             style={styles.buttonAuth}
             onPress={() => setShowModal(true)} >
-            <Text style={styles.textButtonAuth}>Login whith password</Text>
+            <Text style={styles.textButtonAuth}>Senha</Text>
           </TouchableOpacity>
-
         </Animatable.View>
 
         <ModalPassword 
